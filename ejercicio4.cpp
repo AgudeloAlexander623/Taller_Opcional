@@ -9,35 +9,36 @@ Realice un programa que lea de la entrada estándar los siguientes datos de una 
 #include<iostream>
 #include<string.h>
 #include<cmath>
+#include<vector>
+#include<fstream>
 
 using namespace std;
 
-struct Datos{
+struct datos{
     string nombre,sexo;
     int edad;
     float altura;
-}
+};
 
-void datos(string& nombre, int& edad, char& sexo, float& altura){
-    cout<<"Ingresar el nombre, edad, sexo y altura de un estudiante: "<<endl;
+void datosGuardados(vector(datos) & datos){
+    datos datosGuardados;
+    cout<<"------Ingresar datos del esudiante------"<<endl;
     cout<<"Nombre: ";
-    cin>>nombre;
+    cin>>datosGuardados.nombre;
+
     cout<<"Edad: ";
-    cin>>edad;
-    cout<<"Sexo con el que se identifica: ";
-    cin>>sexo;
-    cout<<"Altura: ";
-    cin>>altura;
+    cin>>datosGuardados.edad;
+
+    cout<<"Sexo o genero con el que se idetifica: ";
+    cin>>datosGuardados.sexo;
+
+    cout<<"Estatura";
+    cin>>datosGuardados.altura;
 }
 
-int main(){
-    string nombre,sexo;
-    int edad;
-    float altura;
-
-
-    cout<<"Se llama: "<<nombre<<endl;
-    cout<<"Tiene: "<<edad<<" de edad"<<endl;
-    cout<<"Se identifica como: "<<sexo<<endl;
-    cout<<"Mide: "<<altura<<endl;
+int main(datosGuardados){
+    cout<<"Se llama "<<nombre<<endl;
+    cout<<"Tiene "<<edad<<" de edad"<<endl;
+    cout<<"Se Identifica con el genero "<<sexo<<endl;
+    cout<<"Mide: "<<altura<<"m de altura";
 }

@@ -4,20 +4,6 @@ usuario una contraseña y verifica que cumpla:
 • Longitud mínima de 8 caracteres.
 • Al menos una mayúscula, una minúscula, un número y un carácter especial (!@#$%^&*).
 
-algoritmo:
-    definir contraseñaUsu,ContraseñaReal como caracter
-    
-    para contraseñaUsu != contraseñaReal hacer con paso2
-       contraseñaUsu =  mostrar"Ingresar contraseña"
-                        leer contraseñaReal
-        
-        si contraseñaUsu != contraseñaReal entonces
-            mostrar"contraseña incorrecta"
-        Finsi
-    FinPara
-
-    mostrar"contraseña correcta"
-
 */
 
 #include <iostream>
@@ -26,13 +12,24 @@ algoritmo:
 #include <cctype>
 
 using namespace std;
+
+int main(){
+    
+}
+
 /*
+este codigo que esta documentado es una explicacion por parte de 
+ChatGPT a su vez arreglado por mi parte, ya que no logro entender 
+el problema que se esta especificando 
+
+
 por favor intente con Aa1#Bb2$ o algo parecido 
 para que la contraseña quede bien guardada o sino 
 arrojara un error constantemente hasta que la ingrese
 */
 
 // Función para validar la contraseña
+
 bool validarContrasena(const string& contrasena) {
     if (contrasena.length() != 8) return false;
 
