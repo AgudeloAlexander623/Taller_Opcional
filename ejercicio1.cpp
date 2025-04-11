@@ -1,8 +1,3 @@
-/*
-Verificar si un número es positivo o negativo. Enunciado: Pide al usuario que
-ingrese un número e imprime si es positivo, negativo o cero
-*/
-
 #include<iostream>
 #include<string.h>
 

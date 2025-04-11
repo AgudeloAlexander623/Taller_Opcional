@@ -3,16 +3,38 @@ Realice un programa que calcule el valor que toma la siguiente función para uno
 de x e y: f(x,y) = sqrt(x) / (pow(y,2)-1)
 */
 
-#include<iostream>
-#include<cmath>
-#include<string.h>
-
+#include <iostream>
+#include <cmath>    // Para sqrt y pow
 using namespace std;
 
-int main(){
-    //definimos las variables de X E Y:
+double calcularFuncion(double x, double y) {
+    if (x < 0) {
+        cout << "Error: La raíz cuadrada de un número negativo no está definida en los reales." << endl;
+        return NAN;
+    }
 
-    float x,e,y
+    double denominador = pow(y, 2) - 1;
+    if (denominador == 0) {
+        cout << "Error: División por cero. El denominador (y^2 - 1) no puede ser 0." << endl;
+        return NAN;
+    }
 
-    
+    return sqrt(x) / denominador;
+}
+
+int main() {
+    double x, y;
+
+    cout << "Ingrese el valor de x: ";
+    cin >> x;
+    cout << "Ingrese el valor de y: ";
+    cin >> y;
+
+    double resultado = calcularFuncion(x, y);
+
+    if (!isnan(resultado)) {
+        cout << "El resultado de f(x, y) es: " << resultado << endl;
+    }
+
+    return 0;
 }
